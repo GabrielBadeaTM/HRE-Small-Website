@@ -1,2 +1,10 @@
-# HRE-Small-Website
-🏛️ Small website about the Holy Roman Empire, created to practice HTML &amp; CSS basics. Simple and lightweight project.
+# Roman Empire Mini Website 🌍
+
+This is a small personal project created to practice and learn HTML and CSS.  
+It showcases basic web design skills through a simple site about the Roman Empire.
+
+The site is hosted for free using GitHub Pages.
+
+---
+
+Feel free to explore and give feedback!

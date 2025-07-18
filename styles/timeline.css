@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  max-width: 1200px;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #2b2b2b;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 5px;
+}
+
+/* Removing the border if it is the last card and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 5xp;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 5px;
+}
+
+.info {
+  background-color: #fffdee;
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid #ffd700;
+}
+
+/* Title of the card */
+.title-t {
+  color: #2b2b2b;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Timeline dot  */
+.title-t::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 999px;
+  border: 5px solid #ffd700;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title-t::before {
+  left: -74px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title-t::before {
+  right: -74px;
+}
+
+.timeline p {
+  padding-bottom: 20px;
+}
+
+.timeline img {
+  max-width: 800px;
+  border-radius: 50px;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #ffd700;
+  transition: all ease-in-out 0.2s;
+}
+
+.timeline img:hover {
+  width: 100%;
+}
